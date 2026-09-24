@@ -1,6 +1,6 @@
 # PaperMatcher-AI: Intelligent Scientific Paper Recommendation System
 
-> **A Final Year B.Tech Computer Science & Engineering Capstone Project**  
+> 
 > *Deterministic Semantic Literature Discovery using Sparse Sublinear TF-IDF Vectorization, Exact Cosine Similarity, and Dynamic Pre-Ranking Categorical Filters across 287,421 arXiv Preprints.*
 
 ---
