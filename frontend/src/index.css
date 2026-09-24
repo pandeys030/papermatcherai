@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F7FBFD;
+    color: #183B56;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-image: 
+      radial-gradient(#DDE9EF 0.75px, transparent 0.75px),
+      radial-gradient(#DDE9EF 0.75px, #F7FBFD 0.75px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'DM Serif Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Subtle stationery paper edge effect */
+.paper-sheet {
+  background-color: #FFFFFF;
+  border: 1px solid #DDE9EF;
+  box-shadow: 
+    0 1px 1px rgba(24, 59, 86, 0.04),
+    0 4px 10px rgba(24, 59, 86, 0.05),
+    0 12px 24px rgba(24, 59, 86, 0.04);
+}
+
+/* Subtle archival ink stamp */
+.archival-stamp {
+  display: inline-block;
+  font-family: 'DM Mono', monospace, ui-monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #183B56;
+  background-color: #EAF7FC;
+  border: 1px solid #9DDCF5;
+  padding: 0.2rem 0.55rem;
+  border-radius: 1px;
+}
+
+/* Researcher felt-tip baby-blue highlighter effect */
+.research-highlighter {
+  background: linear-gradient(180deg, transparent 58%, #DDF3FB 58%, #DDF3FB 95%, transparent 95%);
+  padding: 0 0.15rem;
+  border-radius: 1px;
+}
+
+.research-highlighter-strong {
+  background: #DDF3FB;
+  color: #183B56;
+  padding: 0.1rem 0.35rem;
+  border-radius: 1px;
+  border-bottom: 1.5px solid #9DDCF5;
+}
+
+/* Fine hair line */
+.hairline-rule {
+  border-top: 1px solid #DDE9EF;
+}
+
+/* Archival catalog margin label */
+.catalog-label {
+  font-family: 'DM Mono', monospace, ui-monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #667786;
+}
+
+/* Custom scrollbar matching soft paper theme */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #F7FBFD;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDE9EF;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9DDCF5;
+}
+
+/* Staggered entrance animation for research papers */
+@keyframes fadeInRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-rise {
+  animation: fadeInRise 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3-dot pulsing indicator for editorial search */
+@keyframes editorialDotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.65);
+    opacity: 0.35;
+  }
+  40% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.editorial-dot {
+  animation: editorialDotPulse 1.2s infinite ease-in-out both;
+}
+
+.editorial-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.editorial-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.editorial-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+/* Paper corner fold motif */
+.paper-corner-fold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #DDF3FB transparent transparent;
+  filter: drop-shadow(-1px 1px 1px rgba(24, 59, 86, 0.08));
+}
+
